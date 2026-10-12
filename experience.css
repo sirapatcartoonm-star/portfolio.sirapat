@@ -1,0 +1,112 @@
+/* Entrance and contents share the same full-window paper surface. */
+.entrance-page{background:#fafaff;background-image:linear-gradient(#e8e7f03d 1px,transparent 1px),linear-gradient(90deg,#e8e7f03d 1px,transparent 1px);background-size:40px 40px}
+.entrance-page> #app>header,.entrance-page> #app>footer{display:none}
+body[data-page=welcome] .hero{width:100%;max-width:none;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:24px 32px 36px;overflow:hidden}
+body[data-page=welcome] .hero-copy{padding:0;text-align:center;width:auto;max-width:850px;order:0}
+body[data-page=welcome] .hero-copy .eyebrow,body[data-page=welcome] .hero-copy p,body[data-page=welcome] .hero-number,body[data-page=welcome] .note-sticker,body[data-page=welcome] .flower,body[data-page=welcome] .spark,body[data-page=welcome] .badge-backdrop{display:none}
+body[data-page=welcome] .hero-copy h1{font-size:58px;margin:0 0 12px;line-height:1.15}
+body[data-page=welcome] .welcome-word{display:inline}
+body[data-page=welcome] .welcome-word:after{content:' '}
+body[data-page=welcome] .hero-copy h2{font-size:16px;margin:0;color:var(--muted)}
+body[data-page=welcome] .badge-scene{height:545px;width:100%;max-width:560px;margin:0;order:1}
+body[data-page=welcome] .lanyard{height:545px;scale:1.05;animation:gentle 8s ease-in-out infinite}
+body[data-page=welcome] .badge{height:365px;top:155px;transform:rotate(2deg);box-shadow:8px 20px 30px #57435f21,0 0 0 1px #d4cddb,inset 0 0 0 4px #ffffff80}
+body[data-page=welcome] .strap{top:0;height:132px}
+body[data-page=welcome] .clip{top:124px}
+body[data-page=welcome] .badge-top{height:39px}
+body[data-page=welcome] .badge-photo{height:195px;margin:12px 12px 10px}
+body[data-page=welcome] .badge-photo img{object-fit:cover;object-position:40% 65%;transform:scale(1.65);transform-origin:40% 66%}
+body[data-page=welcome] .badge-name{font-size:15px;margin:0 12px}
+body[data-page=welcome] .badge-role{margin:5px 12px;font-size:9px}
+body[data-page=welcome] .barcode{margin:13px 12px 9px;height:15px}
+body[data-page=welcome] .badge:after{background:linear-gradient(118deg,transparent 56%,#ffffff12 57%,transparent 74%)}
+.welcome-cta{order:2;min-width:175px;justify-content:center;padding:14px 22px;background:#63507e;border-color:#63507e;font-size:14px;box-shadow:0 5px 0 #ded4ed;margin-top:8px}
+.welcome-cta:hover{background:#7a6597;transform:translateY(-2px)}
+.dropdown-nav{position:relative;display:flex;gap:12px;align-items:center;margin-left:auto}
+.dropdown-nav .contents-link{display:grid;place-items:center;width:38px;height:38px;padding:0;border:1px solid var(--line);background:white;border-radius:6px}
+.page-dropdown{position:relative}
+.page-select{display:flex;align-items:center;gap:10px;height:42px;width:220px;justify-content:flex-start;border:1px solid #ded4eb;border-radius:6px;padding:0 13px;background:#f2ecf9;font-size:13px}
+.page-select>svg:last-child{margin-left:auto;transition:transform .2s}
+.page-select[aria-expanded=true]>svg:last-child{transform:rotate(180deg)}
+.page-options{position:absolute;right:0;top:calc(100% + 10px);width:255px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px;box-shadow:0 12px 35px #3428401f;z-index:25}
+.dropdown-nav .page-options a{display:flex;gap:12px;padding:12px 10px;border-radius:5px;font-size:13px}
+.dropdown-nav .page-options a span{font-size:13px;color:inherit;display:block}
+.page-options a small{margin-left:auto;font-size:10px;color:var(--muted)}
+.dropdown-nav .page-options a:hover{background:#f5f1fa}
+.dropdown-nav .page-options a[aria-current=page]{background:#f7e3ed}
+.dropdown-nav .page-options a:nth-last-child(2){border-top:1px solid var(--line);margin-top:5px}
+.contents-screen{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:55px 24px 35px;overflow:hidden}
+.contents-back{position:absolute;left:35px;top:28px;display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted)}
+.contents-heading{text-align:center;z-index:1}
+.contents-heading .eyebrow{justify-content:center;font-size:10px}
+.contents-heading .eyebrow:before{display:none}
+.contents-heading h1{font-size:38px;font-weight:500;margin:15px 0 0;line-height:1.4}
+.folder-stage{width:min(100%,940px);height:525px;position:relative;margin:15px auto 0;isolation:isolate}
+.portfolio-folder{position:absolute;width:330px;height:255px;left:50%;top:50%;transform:translate(-50%,-45%) rotate(-4deg);padding:0;background:transparent;border:none;z-index:3;text-align:left;animation:folder-in .55s both}
+.folder-tab{position:absolute;left:0;top:-25px;width:115px;height:45px;background:#b6a2da;border:1px solid #ae95d0;border-bottom:0;border-radius:12px 12px 0 0}
+.folder-cover{position:absolute;inset:0;background:#ccb9ec;border:1px solid #bca4dc;border-radius:4px 12px 12px 12px;box-shadow:0 18px 20px #74618425,inset 0 2px 0 #eee4ff;display:flex;flex-direction:column;justify-content:center;padding:35px}
+.folder-label{font-size:10px;font-weight:700;color:#7b639b}
+.folder-name{font-size:41px;font-weight:600;margin:15px 0 8px;line-height:1.3}
+.folder-subtitle{font-size:10px;color:#766089}
+.folder-sticker{position:absolute;right:24px;bottom:22px;width:45px;height:45px;display:grid;place-items:center;background:#fae998;border-radius:50%;transform:rotate(14deg);border:3px solid #fff8}
+.folder-sticker svg{width:22px;height:22px;color:#9c7784}
+.folder-paper{position:absolute;left:50%;top:50%;width:292px;height:255px;background:white;border:1px solid #e0d8e7;box-shadow:0 4px 7px #0001;z-index:1}
+.paper-one{transform:translate(-48%,-62%) rotate(5deg)}
+.paper-two{transform:translate(-51%,-64%) rotate(-7deg);background:#fffbdf}
+.chapter{position:absolute;width:250px;height:90px;display:flex;gap:13px;align-items:center;padding:15px;background:white;border:1px solid #e0d8e7;border-left:5px solid var(--chapter-color);border-radius:6px;box-shadow:0 9px 18px #6e548410;z-index:4;animation:chapter-in .65s cubic-bezier(.2,.85,.3,1.15) both;animation-delay:var(--delay);transition:translate .2s,box-shadow .2s}
+.chapter:hover{translate:0 -5px;box-shadow:0 13px 25px #6e548426}
+.chapter-icon{width:38px;height:38px;background:var(--chapter-color);display:grid;place-items:center;border-radius:5px;flex:none}
+.chapter>span:nth-child(2){flex:1;min-width:0}
+.chapter small{font-size:9px;color:var(--muted);display:block;margin-bottom:6px}
+.chapter b{font-size:15px;font-weight:500;display:block;white-space:nowrap}
+.chapter>svg{width:15px;color:#b2a3be}
+.chapter-0{left:5px;top:92px;rotate:-5deg}
+.chapter-1{right:5px;top:92px;rotate:5deg}
+.chapter-2{left:5px;bottom:90px;rotate:3deg}
+.chapter-3{right:5px;bottom:90px;rotate:-3deg}
+.contents-colors{margin-top:20px}
+@keyframes chapter-in{from{opacity:0;transform:translateY(45px) scale(.8)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes folder-in{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
+@media(min-height:950px) and (min-width:701px){body[data-page=welcome] .hero{gap:15px}body[data-page=welcome] .badge-scene{height:590px}body[data-page=welcome] .lanyard{scale:1.14}body[data-page=welcome] .hero-copy h1{font-size:68px}}
+@media(max-width:1000px){.chapter{width:225px}.folder-stage{max-width:790px}.portfolio-folder{width:290px;height:230px}.folder-paper{width:255px;height:230px}.folder-cover{padding:25px}.folder-name{font-size:36px}}
+@media(max-width:700px){
+  body[data-page=welcome] .hero{padding:24px 15px 30px;min-height:100svh}
+  body[data-page=welcome] .hero-copy h1{font-size:33px;margin-bottom:10px}
+  body[data-page=welcome] .hero-copy h2{font-size:13px}
+  body[data-page=welcome] .badge-scene{height:445px;margin:0;max-width:340px}
+  body[data-page=welcome] .lanyard{scale:.84;animation:gentle 8s ease-in-out infinite}
+  body[data-page=welcome] .welcome-cta{margin-top:12px}
+  header{min-height:82px;padding:15px 20px;gap:12px}
+  .header-tools{margin-left:0;gap:5px}
+  .header-tools .icon-button{width:32px;height:32px}
+  .dropdown-nav{order:0;width:auto;margin-left:auto;gap:7px}
+  .dropdown-nav .contents-link{display:none}
+  .page-select{width:155px;height:38px;font-size:11px;gap:7px;padding:0 9px}
+  .page-select svg{width:15px;height:15px}
+  header .brand{font-size:14px}
+  .page-options{width:230px}
+  .contents-screen{padding:75px 16px 30px;justify-content:center}
+  .contents-back{top:22px;left:20px;font-size:11px}
+  .contents-heading h1{font-size:28px}
+  .folder-stage{height:510px;max-width:380px;margin-top:10px}
+  .portfolio-folder{width:230px;height:190px;top:50%;transform:translate(-50%,-45%) rotate(-4deg)}
+  .folder-paper{width:207px;height:190px}
+  .folder-name{font-size:29px;margin:12px 0 6px}
+  .folder-subtitle{font-size:8px}
+  .folder-label{font-size:9px}
+  .folder-sticker{right:15px;bottom:14px;width:33px;height:33px}
+  .folder-sticker svg{width:17px;height:17px}
+  .chapter{width:calc(50% - 9px);height:80px;padding:10px 8px;gap:8px;border-left-width:4px}
+  .chapter-icon{width:28px;height:28px}
+  .chapter-icon svg{width:15px;height:15px}
+  .chapter small{font-size:8px}
+  .chapter b{font-size:11px}
+  .chapter>svg{display:none}
+  .chapter-0{left:2px;top:40px;rotate:-3deg}
+  .chapter-1{right:2px;top:40px;rotate:3deg}
+  .chapter-2{left:2px;bottom:34px;rotate:3deg}
+  .chapter-3{right:2px;bottom:34px;rotate:-3deg}
+  .contents-colors{margin-top:0}
+}
+@media(max-width:400px){header{padding:13px 14px;gap:8px}.brand-mark{display:none}header .brand{font-size:12px}.page-select{width:124px}.header-tools{gap:4px}.header-tools .icon-button{width:27px;height:27px}.dropdown-nav{gap:0}}
+@media(prefers-reduced-motion:reduce){.chapter,.portfolio-folder,body[data-page=welcome] .lanyard{animation:none!important}.chapter:hover{translate:none}}
